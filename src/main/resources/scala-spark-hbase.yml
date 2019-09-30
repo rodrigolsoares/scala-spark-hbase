@@ -1,0 +1,13 @@
+spring:
+  profiles: local
+
+hadoopConfiguration:
+  overwite: true
+  kerberos:
+    principal:
+    keytab:
+  files:
+    core-site.xml: <?xml version="1.0"?><?xml-stylesheet type="text/xsl" href="configuration.xsl"?><configuration><property><name>fs.defaultFS</name><value>http://hdfs://localhost:50070</value></property></configuration>
+    hbase-site.xml: <?xml version="1.0"?><?xml-stylesheet type="text/xsl" href="configuration.xsl"?><configuration><property><name>hbase.rootdir</name><value>hdfs://localhost:16010/hbase</value></property></configuration>
+    hdfs-site.xml: <?xml version="1.0"?><?xml-stylesheet type="text/xsl" href="configuration.xsl"?><configuration><property><name>fs.defaultFS</name><value>http://hdfs://localhost:50070</value></property></configuration>
+    hive-site.xml: <?xml version="1.0"?><?xml-stylesheet type="text/xsl" href="configuration.xsl"?><configuration><property><name>fs.defaultFS</name><value>http://hdfs://localhost:50070</value></property></configuration>
